@@ -1,4 +1,12 @@
-This is a work day scheduler to track the users time and plans. The time-blocks change color according to the current time using moment.js. The save button will allow the user to enter data and have it stored for future reference. 
+This is a work day scheduler to track the users time and plans. The time-blocks change color according to the current time using moment.js. The save button will allow the user to enter data and have it stored for future reference. Most people completed this task using JQuery. I wanted to work on getting a better understanding of vanilla JavaScript so I decided to complete the assignment using what I have learned in class. 
+
+Files included:
+<ul>
+  <li>index.html</li>
+  <li>script.js</li>
+  <li>style.css</li>
+  <li>README</li>
+  <ul>
 
 ## Acceptance Criteria
 
