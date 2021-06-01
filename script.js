@@ -63,6 +63,7 @@ let storedEvents = JSON.parse(localStorage.getItem('description'))
 if (storedEvents !== null) {
   events = storedEvents;
 }
+
 let description = document.getElementsByClassName('description')
 for (let i = 0; i < events.length; i++) {
   let userDescription = events[i];
