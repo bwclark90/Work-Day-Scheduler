@@ -44,20 +44,31 @@ let showColor = setInterval(() => {
 timeChecker()
 
 //local storage
-//will not get element by classname 'description'
-document.addEventListener('click', event => {
-  if (event.target.classList.contains('saveBtn')) {
-let description = document.getElementsByClassName('description')
-localStorage.setItem('userData', JSON.stringify(description)) || []
-  }})
-let storedEvents = JSON.parse(localStorage.getItem('userData'));
+
+document.querySelector('.saveBtn').addEventListener('click', event => {
+  let description = document.getElementsByClassName('description')
+  console.log(description)
+  let values = []
+  for (let i = 0; i < description.length; i++ ) {
+    let current = description[i].value
+    values.push(current)
+  }
+  console.log(values)
+localStorage.setItem('description', JSON.stringify(values)) || []
+})
+
+
+let storedEvents = JSON.parse(localStorage.getItem('description'))
 
 if (storedEvents !== null) {
   events = storedEvents;
 }
-
+let description = document.getElementsByClassName('description')
 for (let i = 0; i < events.length; i++) {
-  let userDescription = events[i].description;
-  $("#" + events[i].time).children(".description").text(userDescription);
+  let userDescription = events[i];
+  let textArea = description[i]
+  // let textArea = document.getElementById(i + 9)
+  textArea.value = userDescription
+  
 }
 
